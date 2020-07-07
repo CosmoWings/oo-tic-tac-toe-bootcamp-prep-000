@@ -126,14 +126,13 @@ end
 
 #code for play method
 def play
-  turn until over? do
+  turn until over?
   
   if won?
     puts "Congratulations #{winner}!"
     
   else
     puts "Cat's Game!"
-  end
   end
 end
 
