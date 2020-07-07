@@ -112,7 +112,8 @@ class TicTacToe
 end
 
   def winner
-    if winning_combo = won? #this is an array
+    wining_conmbo = won?
+    if winning_combo
       @board[winning_combo[0]]
     end
   end
