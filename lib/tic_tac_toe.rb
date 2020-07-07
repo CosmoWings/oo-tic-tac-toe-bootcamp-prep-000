@@ -112,14 +112,9 @@ class TicTacToe
 end
 
   def winner
-      #number_of_X = @board.select {|item|item == "X"}
-      #number_of_O = @board.select {|item| item == "O"}
-      winning_combo = won? #this is an array
-      
-      if winning_combo.any?{|num| num != " "} && @board[winning_combo[1]] == "X"
-        return "X"
-    elsif winning_combo.any?{|num| num != " "} &&@board[winning_combo[1]] =="O"
-      return "O"
+      if winning_combo = won? #this is an array
+        return winning_combo[0]
+    end
   end
 
 end
