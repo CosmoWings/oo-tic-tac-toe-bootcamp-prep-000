@@ -112,12 +112,11 @@ class TicTacToe
 end
 
   def winner
-      if winning_combo = won? #this is an array
-        return winning_combo[0]
+    if winning_combo = won? #this is an array
+      @board[winning_combo[0]]
     end
   end
 
-end
 
 #code for play method
 def play
