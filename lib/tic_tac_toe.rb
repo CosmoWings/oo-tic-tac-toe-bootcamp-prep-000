@@ -130,21 +130,15 @@ end
 
 #code for play method
 def play
-  turn
-  if over? && won?
+  turn until over? do
+  
+  if won?
     puts "Congratulations #{winner}!"
-  elsif over? && draw?
-    puts "Cats's Game!"
-  else turn
     
+  elsif draw?
+    puts "Cat's Game!"
+  end
   end
 end
-=begin   
-    if won?
-      puts "Congratulations #{winner}!"
-    
-    elsif draw?
-      puts "Cat's Game!"
-=end
 
 end
